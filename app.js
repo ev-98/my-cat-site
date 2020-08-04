@@ -1,5 +1,5 @@
 // Write your JS in here
-pics = [
+var pics = [
 	"imgs/kitty_bed.jpg",
 	"imgs/kitty_basket.jpg", 
 	"imgs/kitty_laptop.jpg",
@@ -7,3 +7,15 @@ pics = [
 	"imgs/kitty_sink.jpg",
 	"imgs/kitty_wall.jpg"
 ]
+
+var btn = document.querySelector("button");
+var img = document.querySelector("img");
+var count = 1;
+
+btn.addEventListener("click", function(){
+	img.src = pics[count];
+	count+=1;
+	if(count>=pics.length){
+		count = 0;
+	}
+});
